@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-royal-purple: #4C1D95;
+  --color-deep-navy: #0F172A;
+  --color-luxury-gold: #D4AF37;
+  --color-soft-cream: #FAF7F2;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Cinzel', serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-deep-navy);
+    color: var(--color-soft-cream);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-card:hover {
+    border-color: rgba(212, 175, 55, 0.5); /* luxury gold border */
+    box-shadow: 0 4px 40px rgba(212, 175, 55, 0.1);
+  }
+
+  .gold-gradient-text {
+    background: linear-gradient(to right, #D4AF37, #FDE08B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
